@@ -2,11 +2,11 @@ import http from '@ohos.net.http'
 import UserInfo from './UserInfo'
 
 class ListInfo {
-  getListData(): Promise<any[]> {
+  getListData(type): Promise<any[]> {
     return new Promise((resolve, reject) => {
       let conn = http.createHttp();
       conn.request(
-        'http://124.93.196.45:10001/dev-api/bs-smart-charger/orders/list',
+        'http://124.93.196.45:10001/dev-api/bs-smart-charger/orders/list?chargingOrdersType='+type,
         { method: http.RequestMethod.GET,
           header: {
             "Content-Type": "application/json",

@@ -5,7 +5,7 @@ import ListView from './ListView'
 @Component
 export default struct Order {
   aboutToAppear() {
-   ListInfo.getListData()
+   // ListInfo.getListData(1)
   }
   build() {
     Column() {
@@ -23,9 +23,13 @@ export default struct Order {
             ListView()
           }
             .tabBar({ text: "进行中" })
-          TabContent()
+          TabContent(){
+
+          }
             .tabBar({ text: "待支付" })
-          TabContent()
+          TabContent(){
+
+          }
             .tabBar({ text: "已完成" })
         }        
         .width("100%")
