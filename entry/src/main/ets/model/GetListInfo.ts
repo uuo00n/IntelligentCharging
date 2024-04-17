@@ -6,7 +6,7 @@ class ListInfo {
     return new Promise((resolve, reject) => {
       let conn = http.createHttp();
       conn.request(
-        'http://124.93.196.45:10001//prod-api/api/logistics-inquiry/logistics_company/list',
+        'http://124.93.196.45:10001/dev-api/bs-smart-charger/orders/list',
         { method: http.RequestMethod.GET,
           header: {
             "Content-Type": "application/json",
@@ -17,9 +17,8 @@ class ListInfo {
         .then((resp: http.HttpResponse) => {
           if (resp.responseCode === 200) {
             let list: any[] = JSON.parse(resp.result.toString()).data
-            console.log(""+list)
             if (list.length != 0) {
-              console.log("成功获取有效数据")
+              console.log("成功获取有效数据"+list.length)
             }else {
               console.log("获取数据数为0")
             }

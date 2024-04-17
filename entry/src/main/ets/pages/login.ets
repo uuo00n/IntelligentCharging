@@ -1,6 +1,5 @@
 import router from '@ohos.router';
-import DoLogin from '../model/DoLogin'
-import LoginInfo from '../model/LoginInfo'
+import DoLogin from '../model/GetUser'
 
 @Entry
 @Component
@@ -25,7 +24,7 @@ struct Login {
             .width("20%")
             .height("60vp")
             .fontSize("25fp")
-          TextInput({ placeholder: "请输入账户", text: 'huangjb' })
+          TextInput({ placeholder: "请输入账户", text: '14761940053' })
             .type(InputType.Normal)
             .width("250vp")
             .height("50vp")
@@ -42,7 +41,7 @@ struct Login {
             .width("20%")
             .height("60vp")
             .fontSize("25fp")
-          TextInput({ placeholder: "请输入密码", text: 'huang' })
+          TextInput({ placeholder: "请输入密码", text: '123456' })
             .type(InputType.Password)
             .width("250vp")
             .height("50vp")

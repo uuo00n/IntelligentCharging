@@ -1,5 +1,5 @@
 import Home from './Home'
-import ListInfo from '../model/ListInfo'
+import ListInfo from '../model/GetListInfo'
 import ListView from './ListView'
 @Preview
 @Component

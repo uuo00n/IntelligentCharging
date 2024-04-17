@@ -1,5 +1,5 @@
 import router from '@ohos.router'
-import ListInfo from '../model/ListInfo'
+import ListInfo from '../model/GetListInfo'
 
 @Component
 export default struct ListView {
