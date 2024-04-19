@@ -4,9 +4,11 @@ import ListInfo from '../model/GetListInfo'
 @Component
 export default struct ListView {
   @State listData: any[] = []
+  @State type : number = 1
 
   aboutToAppear() {
-    ListInfo.getListData(1).then((val) => {
+    console.log("XXXXXXXXXXXXXXXXXXXXXX")
+    ListInfo.getListData(this.type).then((val) => {
       this.listData = val
     })
   }
@@ -112,22 +114,22 @@ export default struct ListView {
               .borderRadius("10vp")
               .backgroundColor("#b8babc")
               .padding({ top: "10vp", bottom: "10vp", left: "10vp", right: "10vp" })
-              .onClick(() => {
-                console.log("" + item.id)
-                router.pushUrl({
-                  url: 'pages/OrderAbout',
-                  params: {
-                    item
-                  },
-                },
-                  router.RouterMode.Standard,
-                  err=>{
-                    if (err) {
-                      console.log("路由错误"+err+"code"+err.code+"msg"+err.message)
-                    }
-                  }
-                )
-              })
+              // .onClick(() => {
+              //   console.log("" + item.id)
+              //   router.pushUrl({
+              //     url: 'pages/OrderAbout',
+              //     params: {
+              //       item
+              //     },
+              //   },
+              //     router.RouterMode.Standard,
+              //     err=>{
+              //       if (err) {
+              //         console.log("路由错误"+err+"code"+err.code+"msg"+err.message)
+              //       }
+              //     }
+              //   )
+              // })
             })
           }
           .width("100%")
